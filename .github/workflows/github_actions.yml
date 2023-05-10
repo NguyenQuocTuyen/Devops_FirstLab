@@ -1,4 +1,4 @@
-name: merge
+name: Lab DevOps
 on:  
   push:  
     branches:
