@@ -27,7 +27,10 @@ jobs:
           distribution: 'temurin'
           
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots package
+        run: mvn clean package
+        
+      - name: Run Java application
+        run: java -jar target/my-app.jar
         
         
   updateAuthor:
@@ -43,7 +46,7 @@ jobs:
         run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
         
       - name: raise pr
-        uses: Dev/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v3
         with:
           branch: "DevOps"
           base: "Develop"
