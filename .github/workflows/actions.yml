@@ -53,7 +53,8 @@ jobs:
           body:
             this is to show automatic pr 
           token: ${{ secrets.GITHUB_TOKEN }}
-          delete-branch: false
+          delete-branch: true
+          
           
           
       
