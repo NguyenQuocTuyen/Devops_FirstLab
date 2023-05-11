@@ -46,7 +46,7 @@ jobs:
         uses: Dev/create-pull-request@v3
         with:
           branch: "DevOps"
-          base: main
+          base: "Develop"
           title: "auto pull request"
           committer:  ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
