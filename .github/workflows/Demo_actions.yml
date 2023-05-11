@@ -30,7 +30,7 @@ jobs:
         run: mvn clean package
         
       - name: Run Java application
-        run: java -jar target/my-app.jar
+        run: java -jar 
         
         
   updateAuthor:
