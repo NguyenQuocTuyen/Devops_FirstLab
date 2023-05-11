@@ -1,0 +1,31 @@
+name: Lab DevOps
+on:  
+  push:  
+    branches:
+      - DevOps
+  pull_request:
+    branches:
+      - DevOps
+  workflow_dispatch:
+
+jobs:
+  build-node:
+    name: Automated building
+    runs-on: ubuntu-latest
+    container: node:14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x 
+      - name: Install npm package
+        run: npm install
+      - name: Run application
+        run: node DevOps/Fibonacci.java
+       
+      
+          
+    
+    
