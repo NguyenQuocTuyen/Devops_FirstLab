@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-node:
     name: Automated building
     runs-on: ubuntu-latest
     container: node:14
