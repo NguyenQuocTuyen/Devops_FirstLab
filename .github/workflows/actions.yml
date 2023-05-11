@@ -42,7 +42,7 @@ jobs:
       - name: update author information
         run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
         
-      - name: Raise PR
+      - name: raise pr
         uses: Dev/create-pull-request@v3
         with:
           branch: "DevOps"
