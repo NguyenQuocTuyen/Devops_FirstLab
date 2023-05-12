@@ -30,7 +30,7 @@ jobs:
         run: mvn clean package
         
       - name: Run Java application
-        run: java -jar /////////////////////  file pom.xml(done) email(searching) 
+        run: mvn -8 package --file pom.xml
         
         
   pull_request:
